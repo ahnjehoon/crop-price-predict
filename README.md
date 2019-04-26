@@ -10,22 +10,24 @@
 
 - stdunitnewcode 단위코드 
 
-연관코드
+  연관코드
 
-- stdunitnewnm(단위명)
+  - stdunitnewnm(단위명)
 
-종류
+  종류
 
-- 13 - ton
-- 12 - kg
-- 11 - g
+  단위명이 g되어있는 것도 있는데 확인이 필요함
 
-단위명이 g되어있는 것도 있는데 확인이 필요함
+  - 13 - ton
+  - 12 - kg
+  - 11 - g
 
 - delngprut 거래단량
+
   매매단위명과 포장상태명을 조합하여 의미를 가지게 되는 숫자임
 
 - delngQy 거래량
+
   상품의 거래 물량
 
 - delngDe 경락일자
@@ -64,6 +66,7 @@
   - 1Z 무등급
 
 - stdprdlstcode 구품목코드
+
   연관코드
 
   - stdprdlstnewcode 품목코드
@@ -71,12 +74,37 @@
   - stdprdlstnm 구품목명
 
 - cprmtccode 구산지코드
+
   연관코드
 
   - stdmtcnewcode 산지코드
   - stdmtcnewnm 산지명
 
   산지에 따라 작물이 영향을 받을 수 있을것 같아 집어넣음
+
+##### 새롭게 만들 컬럼 목록
+
+- 가격(sbidpric) / 거래단량(delngprut) = Kg당 가격(kgperprice)
+
+  거래 단량은 단위당 몇 Kg인지 나타내는 단위이며
+
+  가격은 거래단량으로 얼마가 팔렸는지 나타낸다
+
+  그래서 Kg당 가격을 구하고 싶으면 가격 / 거래단량
+
+  거래 단량은 단위당 몇 Kg인지 나타내는 단위이며
+
+  가격은 거래단량으로 얼마가 팔렸는지 나타낸다
+
+  그래서 Kg당 가격을 구하고 싶으면 가격 / 거래단량
+
+- 총거래가격(totalprice)
+
+  거래(delngQy)량 x 가격 하면 거래 가격이 나옴
+
+- 총량(totalweight)
+
+  거래단량 x 거래량
 
 
 
